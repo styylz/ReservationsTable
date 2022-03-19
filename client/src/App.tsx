@@ -8,30 +8,35 @@ function App() {
       <div className='container'>
         <div className='reservation__container'>
           <div>
-            <h2 className='reservation__header'> Reservations</h2>
-            <div className='reservation__cards'>
+            <h3 className='reservation__header'> Reservations</h3>
+            <div className='reservation__cards-container'>
               <div className='reservation__card-container'>
                 <p> Name</p>
               </div>
             </div>
+          </div>
             <div className='reservation__input-container'>
               <input/>
               <button>Add</button>
             </div>
-          </div>
+        </div>
           <div className='customer-food__container'>
-            <div className='customer-foods__card-container'>
+            <div className='customer-food__card-container'>
               <h3>Name</h3>
-              <div className='customer-foods__food'>
-                <p>Cake</p>
-              </div>
-              <div className='customer-foods__input-container'>
-                <input/>
-                <button>Add</button>
-              </div>
+              <div className='customer-foods__container'>
+                <div className='customer-foods__food'>
+                  <p>Cake</p>
+                </div>
+                <div className='customer-food__input-container'>
+                  <input/>
+                  <button>Add</button>
+                </div>
+             </div>
             </div>
           </div>
-        </div>
+
+
+
       </div>
     </div>
    </>
