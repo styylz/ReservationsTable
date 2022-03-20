@@ -22,5 +22,5 @@ export const reservationSlice = createSlice({
 })
 
 // export addReservation to access it from another place
-export const { addReservation } = reservationSlice.actions
+export const { addReservation, removeReservation } = reservationSlice.actions
 export default reservationSlice.reducer

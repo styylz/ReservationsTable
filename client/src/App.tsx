@@ -24,7 +24,7 @@ function App() {
           <div>
             <h3 className='reservation__header'> Reservations</h3>
             <div className='reservation__cards-container'>
-              {reservations.map(name => <ReservationCard key={name} name={name} /> )}
+              {reservations.map((name, i) => <ReservationCard key={name} index={i} name={name} /> )}
             </div>
           </div>
             <div className='reservation__input-container'>
