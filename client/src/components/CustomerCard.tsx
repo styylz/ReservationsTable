@@ -1,10 +1,14 @@
 import React from 'react'
 
-function CustomerCard() {
+interface CustomerCardTypes {
+    key: string
+    name: string;
+  }
+function CustomerCard({name}: CustomerCardTypes) {
 
   return (
     <div className='customer-food__card-container'>
-    <h3>Name</h3>
+    <h3>{name}</h3>
     <div className='customer-foods__container'>
       <div className='customer-foods__food'>
         <p>Cake</p>
