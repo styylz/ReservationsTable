@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 import { RootState } from './app/store';
 import ReservationCard from './components/ReservationCard';
+import CustomerCard from './components/CustomerCard';
 import { addReservation } from './features/reservationSlice';
 
 function App() {
@@ -39,22 +40,8 @@ function App() {
             </div>
         </div>
           <div className='customer-food__container'>
-            <div className='customer-food__card-container'>
-              <h3>Name</h3>
-              <div className='customer-foods__container'>
-                <div className='customer-foods__food'>
-                  <p>Cake</p>
-                </div>
-                <div className='customer-food__input-container'>
-                  <input/>
-                  <button>Add</button>
-                </div>
-             </div>
-            </div>
+           <CustomerCard />
           </div>
-
-
-
       </div>
     </div>
    </>
