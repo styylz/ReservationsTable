@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import './App.css';
 import { RootState } from './app/store';
 import ReservationCard from './components/ReservationCard';
 
 function App() {
+  const [reservationNameInput, setreservationNameInput] = useState('')
   const reservations = useSelector((state: RootState) => state.reservations.value)
+
   return (
    <>
     <div className='App'>
@@ -18,7 +20,11 @@ function App() {
             </div>
           </div>
             <div className='reservation__input-container'>
-              <input/>
+              <input
+                name="reservationNameInput"
+                value={reservationNameInput}
+                onChange={(e)=> setreservationNameInput(e.target.value)}
+              />
               <button>Add</button>
             </div>
         </div>
