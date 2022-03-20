@@ -2,10 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import './App.css';
 import { RootState } from './app/store';
+import ReservationCard from './components/ReservationCard';
 
 function App() {
   const reservations = useSelector((state: RootState) => state.reservations.value)
-  console.log(reservations)
   return (
    <>
     <div className='App'>
@@ -14,9 +14,7 @@ function App() {
           <div>
             <h3 className='reservation__header'> Reservations</h3>
             <div className='reservation__cards-container'>
-              <div className='reservation__card-container'>
-                <p> Name</p>
-              </div>
+              {reservations.map(name => <ReservationCard name={name} /> )}
             </div>
           </div>
             <div className='reservation__input-container'>
