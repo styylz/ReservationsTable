@@ -1,7 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import './App.css';
+import { RootState } from './app/store';
 
 function App() {
+  const reservations = useSelector((state: RootState) => state.reservations.value)
+  console.log(reservations)
   return (
    <>
     <div className='App'>
