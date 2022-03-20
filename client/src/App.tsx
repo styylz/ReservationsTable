@@ -41,7 +41,7 @@ function App() {
             </div>
         </div>
           <div className='customer-food__container'>
-           {customers.map(customer => <CustomerCard key={customer.id} name={customer.name} />)}
+           {customers.map(({id, name, food}) => <CustomerCard key={id} id={id} name={name} food={food} />)}
           </div>
       </div>
     </div>
