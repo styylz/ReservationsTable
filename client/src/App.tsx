@@ -9,6 +9,7 @@ import { addReservation } from './features/reservationSlice';
 function App() {
   const [reservationNameInput, setreservationNameInput] = useState('')
   const reservations = useSelector((state: RootState) => state.reservations.value)
+  const customers = useSelector((state: RootState) => state.customer.value)
   const dispatch = useDispatch()
 
   const handleAddReservations = () => {
@@ -40,7 +41,7 @@ function App() {
             </div>
         </div>
           <div className='customer-food__container'>
-           <CustomerCard />
+           {customers.map(customer => <CustomerCard />)}
           </div>
       </div>
     </div>

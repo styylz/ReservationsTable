@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface CustomerState {
     value: Customer[];
@@ -17,8 +17,13 @@ const initialState: CustomerState = {
 const customerSlice = createSlice({
     name: "customers",
     initialState,
-    reducers: {}
+    reducers: {
+        addCustomer: (state, action: PayloadAction<Customer>) => {
+            state.value.push(action.payload)
+        }
+    }
 });
 
+export const { addCustomer } = customerSlice.actions
 
 export default customerSlice.reducer
